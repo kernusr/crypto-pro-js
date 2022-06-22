@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ lts/*, latest ]
+        node-version: [ lts/* ]
 
     steps:
       - uses: actions/checkout@v3
@@ -21,10 +21,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      - name: Override NODE options for the most recent version
-        if: matrix.node-version == 'latest'
-        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
 
       - name: Clean install, build, test
         run: |
