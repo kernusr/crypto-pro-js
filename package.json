@@ -19,7 +19,7 @@
     "build:uncompressed:esm": "cross-env TS_CONFIG=tsconfig-esm.json webpack",
     "build:definition-header:esm": "cross-env TS_CONFIG=tsconfig-esm.json node definition-header.js",
     "build:esm": "npm run build:uncompressed:esm && npm run build:definition-header:esm",
-    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run clean && npm run build:es5 && npm run build:esm",
+    "build": "npm run clean && npm run build:es5 && npm run build:esm",
     "pack:clean": "cross-env rimraf %npm_package_name%-%npm_package_version%.tgz",
     "pack:uncompress": "cross-env tar xopf %npm_package_name%-%npm_package_version%.tgz",
     "test": "jest --coverage && coveralls < coverage/lcov.info",
