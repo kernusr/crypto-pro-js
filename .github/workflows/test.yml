@@ -15,6 +15,9 @@ jobs:
       matrix:
         node-version: [ lts/*, latest ]
 
+    env:
+      repo_token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -31,11 +34,6 @@ jobs:
           npm ci
           npm run build --if-present
           npm test
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
 
   lint:
     runs-on: ubuntu-20.04
