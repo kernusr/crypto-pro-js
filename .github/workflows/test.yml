@@ -21,11 +21,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Override NODE options for the most recent version
+        if: matrix.node-version == 'latest'
+        run: echo "NODE_OPTIONS=--openssl-legacy-provider" >> $GITHUB_ENV
+
       - name: Clean install, build, test
         run: |
           npm ci
           npm run build --if-present
           npm test
+
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:

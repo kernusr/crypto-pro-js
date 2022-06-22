@@ -15,7 +15,7 @@
     "build:uncompressed:es5": "cross-env TS_CONFIG=tsconfig-es5.json webpack",
     "build:compressed:es5": "cross-env TS_CONFIG=tsconfig-es5.json NODE_ENV=production webpack",
     "build:definition-header:es5": "cross-env TS_CONFIG=tsconfig-es5.json node definition-header.js",
-    "build:es5": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run build:uncompressed:es5 && npm run build:compressed:es5 && npm run build:definition-header:es5",
+    "build:es5": "npm run build:uncompressed:es5 && npm run build:compressed:es5 && npm run build:definition-header:es5",
     "build:uncompressed:esm": "cross-env TS_CONFIG=tsconfig-esm.json webpack",
     "build:definition-header:esm": "cross-env TS_CONFIG=tsconfig-esm.json node definition-header.js",
     "build:esm": "npm run build:uncompressed:esm && npm run build:definition-header:esm",
