@@ -1,7 +1,7 @@
-import {CadesCertificate} from '../api/certificate';
-import {_afterPluginsLoaded} from './_afterPluginsLoaded';
-import {_extractMeaningfulErrorMessage} from './_extractMeaningfulErrorMessage';
-import {__cadesAsyncToken__, __createCadesPluginObject__, _generateCadesFn} from './_generateCadesFn';
+import { CadesCertificate } from '../api/certificate';
+import { _afterPluginsLoaded } from './_afterPluginsLoaded';
+import { _extractMeaningfulErrorMessage } from './_extractMeaningfulErrorMessage';
+import { __cadesAsyncToken__, __createCadesPluginObject__, _generateCadesFn } from './_generateCadesFn';
 
 /**
  * Возвращает сертификат в формате Cades по отпечатку из хранилища закрытого ключа
@@ -11,7 +11,7 @@ import {__cadesAsyncToken__, __createCadesPluginObject__, _generateCadesFn} from
  */
 export const _getCadesContainerCert = _afterPluginsLoaded(
   (thumbprint: string): CadesCertificate => {
-    const {cadesplugin} = window;
+    const { cadesplugin } = window;
 
     return eval(
       _generateCadesFn(function _getCadesCert() {
@@ -53,7 +53,10 @@ export const _getCadesContainerCert = _afterPluginsLoaded(
         } catch (error) {
           console.error(error);
 
-          throw new Error(_extractMeaningfulErrorMessage(error) || 'Ошибка получения списка сертификатов из хранилища закрытого ключа');
+          throw new Error(
+            _extractMeaningfulErrorMessage(error) ||
+              'Ошибка получения списка сертификатов из хранилища закрытого ключа',
+          );
         }
 
         if (!certificatesCount) {
@@ -76,7 +79,9 @@ export const _getCadesContainerCert = _afterPluginsLoaded(
         } catch (error) {
           console.error(error);
 
-          throw new Error(_extractMeaningfulErrorMessage(error) || 'Ошибка при получении сертификата из хранилища закрытого ключа');
+          throw new Error(
+            _extractMeaningfulErrorMessage(error) || 'Ошибка при получении сертификата из хранилища закрытого ключа',
+          );
         }
 
         cadesStore.Close();

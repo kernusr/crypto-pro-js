@@ -1,10 +1,9 @@
-import {Certificate} from './certificate';
-import {_afterPluginsLoaded} from '../helpers/_afterPluginsLoaded';
-import {getUserCertificates} from './getUserCertificates';
-import {getContainerCertificates} from "./getContainerCertificates";
-import {getAllUserCertificates} from "./getAllUserCertificates";
-import {getAllContainerCertificates} from "./getAllContainerCertificates";
-
+import { Certificate } from './certificate';
+import { _afterPluginsLoaded } from '../helpers/_afterPluginsLoaded';
+import { getUserCertificates } from './getUserCertificates';
+import { getContainerCertificates } from './getContainerCertificates';
+import { getAllUserCertificates } from './getAllUserCertificates';
+import { getAllContainerCertificates } from './getAllContainerCertificates';
 
 let certificatesCache: Certificate[];
 /**
@@ -15,7 +14,6 @@ let certificatesCache: Certificate[];
  */
 export const getCertificates = _afterPluginsLoaded(
   async (resetCache: boolean = false): Promise<Certificate[]> => {
-
     if (!resetCache && certificatesCache) {
       return certificatesCache;
     }
@@ -41,7 +39,7 @@ export const getCertificates = _afterPluginsLoaded(
 
         while (containerCertificatesCount) {
           foundAvailableCertificate = availableCertificates.find(
-            (cert) => cert.thumbprint === containerCertificates[containerCertificatesCount].thumbprint
+            (cert) => cert.thumbprint === containerCertificates[containerCertificatesCount].thumbprint,
           );
 
           if (!foundAvailableCertificate) {

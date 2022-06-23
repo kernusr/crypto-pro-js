@@ -1,7 +1,7 @@
-import {Certificate} from './certificate';
-import {_afterPluginsLoaded} from '../helpers/_afterPluginsLoaded';
-import {getCertificates} from "./getCertificates";
-import {getAllCertificates} from "./getAllCertificates";
+import { Certificate } from './certificate';
+import { _afterPluginsLoaded } from '../helpers/_afterPluginsLoaded';
+import { getCertificates } from './getCertificates';
+import { getAllCertificates } from './getAllCertificates';
 
 /**
  * Возвращает сертификат по отпечатку

@@ -1,7 +1,7 @@
-import {CadesCertificate} from '../api/certificate';
-import {_afterPluginsLoaded} from './_afterPluginsLoaded';
-import {_getCadesUserCert} from "./_getCadesUserCert";
-import {_getCadesContainerCert} from "./_getCadesContainerCert";
+import { CadesCertificate } from '../api/certificate';
+import { _afterPluginsLoaded } from './_afterPluginsLoaded';
+import { _getCadesUserCert } from './_getCadesUserCert';
+import { _getCadesContainerCert } from './_getCadesContainerCert';
 
 /**
  * Возвращает сертификат в формате Cades по отпечатку
@@ -22,5 +22,5 @@ export const _getCadesCert = _afterPluginsLoaded(
     }
 
     return cadesCertificate;
-  }
+  },
 );
