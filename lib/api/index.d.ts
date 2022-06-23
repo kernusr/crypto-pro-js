@@ -3,6 +3,8 @@ export * from './getUserCertificates';
 export * from './getAllUserCertificates';
 export * from './getContainerCertificates';
 export * from './getAllContainerCertificates';
+export * from './getCertificates';
+export * from './getAllCertificates';
 export * from './getSystemInfo';
 export * from './isValidSystemSetup';
 export * from './createXMLSignature';
