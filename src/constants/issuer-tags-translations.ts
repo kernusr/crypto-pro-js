@@ -13,7 +13,7 @@ export const ISSUER_TAGS_TRANSLATIONS: TagsTranslations[] = [
   { possibleNames: ['ОГРНИП', 'OGRNIP'], translation: 'ОГРНИП' },
   { possibleNames: ['СНИЛС', 'SNILS'], translation: 'СНИЛС' },
   { possibleNames: ['ИНН', 'ИННФЛ', 'ИНН ФЛ', 'INN', 'ИНН физического лица'], translation: 'ИНН' },
-  { possibleNames: ['ИННЮЛ', 'ИНН ЮЛ', 'INN LE', 'INNLE', 'ИНН организации'], translation: 'ИНН ЮЛ' },
+  { possibleNames: ['ИННЮЛ', 'ИНН ЮЛ', 'INN LE', 'INNLE', 'ИНН организации'], translation: 'ИНН организации' },
   { possibleNames: ['E', 'email', 'emailAddress', 'pkcs9email'], translation: 'Email' },
   { possibleNames: ['L', 'localityName'], translation: 'Город' },
 ];

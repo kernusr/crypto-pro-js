@@ -2,7 +2,7 @@ import { TagsTranslations } from './tags-translations';
 
 export const SUBJECT_TAGS_TRANSLATIONS: TagsTranslations[] = [
   { possibleNames: ['UN', 'UnstructuredName'], translation: 'Неструктурированное имя' },
-  { possibleNames: ['CN', 'commonName'], translation: 'Удостоверяющий центр' },
+  { possibleNames: ['CN', 'commonName'], translation: 'Владелец' },
   { possibleNames: ['SN', 'surname'], translation: 'Фамилия' },
   { possibleNames: ['G', 'givenName', 'gn'], translation: 'Имя Отчество' },
   { possibleNames: ['C', 'countryName'], translation: 'Страна' },
