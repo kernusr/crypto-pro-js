@@ -1,6 +1,6 @@
 {
   "name": "crypto-pro-example-es5-script-tag",
-  "version": "0.0.0",
+  "version": "2.3.3",
   "description": "Пример использования пакета crypto-pro через тэг script",
   "private": true,
   "scripts": {
